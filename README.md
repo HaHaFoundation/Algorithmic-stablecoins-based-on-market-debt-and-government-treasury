@@ -1,5 +1,6 @@
 Algorithmic Stablecoin Built on Market Arbitrage, Debt Claims & Protocol Treasury
 Release Date: 2026
+
 Abstract
 USDH is a decentralized algorithmic stablecoin protocol supported by three core modules: market arbitrage regulation, yUSD debt claim buffer, and protocol treasury repayment system. The protocol issues three native on-chain tokens:
 USDH: USD-pegged stablecoin
@@ -7,6 +8,7 @@ WEI: Native utility and governance token of the protocol
 yUSD: Protocol debt token
 In the normal price band of 0.9 < USDH < 1.1, a dual-token arbitrage mechanism similar to UST-LUNA maintains the peg. When USDH trades above 1.1, progressive mint taxes are imposed to fill the treasury pool and pull the price back to the target range. If USDH falls below 0.9, burned USDH is converted partially into WEI and partially into yUSD debt tokens for the discounted value gap. This design avoids infinite WEI minting and the classic death spiral of early algorithmic stablecoins.
 Treasury funds accumulated via arbitrage taxes, protocol fees and yield strategies are exclusively used to repurchase yUSD and cover interest payments for debt holders. Version v0.1 adds a comprehensive on-chain risk control framework to mitigate systemic risks, including bank run prevention, flash loan attack defense, whale long/short manipulation limits, oracle failure safeguards, daily transaction caps, and tiered circuit breakers. All risk rules are hard-coded in smart contracts to create multi-layer safety barriers for long-term peg stability.
+
 1 Project Background & Core Design Goals
 1.1 Industry Pain Points
 Traditional dual-token algorithmic stablecoins suffer from inherent structural vulnerabilities:
